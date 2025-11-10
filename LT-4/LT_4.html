@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="LT_4.css">
+</head>
+
+</head>
+<body>
+    <h2>Donor Information</h2>
+    <form action="/register" method="POST">
+        <!--First NAME Field-->
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required><br><br>
+
+        <!--Last NAME Field-->
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required><br><br>
+
+
+        <!--Company NAME Field-->
+        <label for="companyname"> Company :</label>
+        <input type="text" id="companyname" name="companyname" required><br><br>
+
+
+        <!--Addess 1 Field-->
+        <label for="address_1"> Address 1 :</label>
+        <input type="text" id="address_1" name="address_1" required><br><br>
+
+
+        <!--Addess 2 Field-->
+        <label for="address_2"> Address 2 :</label>
+        <input type="text" id="address_2" name="address_2" required><br><br>
+
+
+        <!--City Name Field-->
+        <label for="city"> City :</label>
+        <input type="text" id="city" name="city" required><br><br>
+
+
+        <!--State Selection-->
+        <label for="state">State:</label>
+        <select id="state" name="state" required>
+            <option value="" disabled selected>Select State</option>
+            <option value="New York">New York</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Dhaka">Dhaka</option>
+            <option value="California">California</option>
+        </select><br><br>
+
+        <!--Zip Code Field-->
+        <label for="zip_code"> Zip Code :</label>
+        <input type="text" id="zip_code" name="zip_code" required><br><br>
+
+
+        <!--Country Selection-->
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+        <option value="" disabled selected>Select Country</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="India">India</option>
+        </select><br><br>
+
+        <!--Phone Field-->
+        <label for="phone"> Phone :</label>
+        <input type="number" id="phone" name="phone" required><br><br>
+
+        <!--Fax Field-->
+        <label for="fax"> fax :</label>
+        <input type="text" id="fax" name="fax" required><br><br>
+
+        <!--Email Field-->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+
+        <!--Donation Amount Selection-->
+        <label for="donation_amount">Donation Amount :</label>
+        <input type="radio" id="None" name="donation_amount" value="None"required>
+        <label for="None">None</label>
+        <input type="radio" id="$50" name="donation_amount" value="$50"required>
+        <label for="$50">$50</label>
+        <input type="radio" id="$75" name="donation_amount" value="$75"required>
+        <label for="$75">$75</label>
+        <input type="radio" id="$100" name="donation_amount" value="$100"required>
+        <label for="$100">$100</label>
+        <input type="radio" id="$200" name="donation_amount" value="$200"required>
+        <label for="$200">$200</label>
+        <input type="radio" id="other" name="donation_amount" value="other"required>
+        <label for="other">Other</label><br><br>
+
+        <!--Other Amount-->
+        <label for="other_amount">Other Amount :</label>
+        <input type="other_amount" id="other_amount" name="other_amount" required><br><br>
+
+        <!--Recurring Donation-->
+        <label for="recurring_donation"> Recurring Donation </label>
+            <input type="checkbox" id="recurring_donation" name="recurring_donation" required>
+            I am intersted in giving on a regular basis.
+        </label><br><br>
+
+    <h2>Honorarium and Memorial Donation Information</h2>
+    <form action="/register" method="POST">
+
+        <!--Donation Reason Selection-->
+        <label for="donation_reason">I would like to make this donation </label>
+        <input type="radio" id="to_honor" name="donation_reason" value="to_honor"required>
+        <label for="to_honor">To Honor</label>
+        <input type="radio" id="memory" name="donation_reason" value="memory"required>
+        <label for="memory">In Memory of</label><br><br>
+
+         <!--NAME Field-->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!--Acknowledge Field-->
+        <label for="Acknowledge">Acknowledge Donation to :</label>
+        <input type="text" id="Acknowledge" name="Acknowledge" required><br><br>
+
+        <!--Addess Field-->
+        <label for="address"> Address :</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+
+        <!--City Name Field-->
+        <label for="city"> City :</label>
+        <input type="text" id="city" name="city" required><br><br>
+
+        <!--State Selection-->
+        <label for="state">State:</label>
+        <select id="state" name="state" required>
+            <option value="" disabled selected>Select State</option>
+            <option value="New York">New York</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Dhaka">Dhaka</option>
+            <option value="California">California</option>
+        </select><br><br>
+
+        <!--Zip Code Field-->
+        <label for="zip_code"> Zip Code :</label>
+        <input type="text" id="zip_code" name="zip_code" required><br><br>
+
+    <h2>Additional Information </h2>
+    <form action="/register" method="POST">
+        <label for="text"> Please enter your name,company or organization as you would like it to appear in our publications:</label><br><br>
+
+        <!--NAME Field-->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!--Agree to Term and Condition-->
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            I would like my gift to remain anonymous.
+        </label><br><br>
+
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            My employer offers a matching gift program.I will mail the matching gift form.
+        </label><br><br>
+
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            Please save the cost of acknowledging this gift by not mailing a thank you letter.    
+        </label><br><br>
+
+        <!--Comments Field-->
+        <label for="comment">Comments :</label>
+        <input type="text" id="comment" name="comment" required><br><br>
+
+        <form action="/register" method="POST">
+        <label for="text"> (Please type any question or feedback here)</label><br><br>
+
+        <!--How to Contact-->
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            E-mail
+        </label><br><br>
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            Postal Mail
+        </label><br><br>
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            Telephone
+        </label><br><br>
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            Fax
+        </label><br><br>
+
+        <label for="text">I would receive newsletters and information about special events by:</label><br><br>
+
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            E-mail 
+        </label><br><br>
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            Postal Mail
+        </label><br><br>
+    <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            I would like information about volunteering
+        </label><br><br>
+
+        <!--Reset & Continue Button-->
+        <button type="reset">Reset</button>
+        <button type="continue">Continue</button>
+
+        
+    </form>
+    <!-- Link to JS file -->
+    <script src="LT_4.js"></script>
+</body>
+</html>

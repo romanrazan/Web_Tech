@@ -1,0 +1,51 @@
+/* General Page Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    color: #003366;
+    margin-top: 20px;
+}
+
+/* Section Styling */
+.section {
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    color: #222;
+}
+
+/* Unique Colors for Each Section */
+#about {
+    background-color: #cce5ff;
+}
+
+#education {
+    background-color: #d4edda;
+}
+
+#hobbies {
+    background-color: #fff3cd;
+}
+
+/* HR Styling */
+hr {
+    border: none;
+    height: 4px;
+    background-color: #003366;
+    width: 60%;
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+}

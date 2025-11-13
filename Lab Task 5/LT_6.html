@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>University Admission Form</title>
+
+<!-- Internal CSS -->
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f6ff;
+    margin: 40px;
+  }
+
+  h2 {
+    color: #2b6cb0;
+    border-bottom: 2px solid #2b6cb0;
+    padding-bottom: 5px;
+  }
+
+  form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+
+  label {
+    display: inline-block;
+    width: 180px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  input, select, textarea {
+    padding: 6px;
+    width: 250px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  textarea {
+    width: 400px;
+    height: 80px;
+  }
+
+  .section {
+    margin-bottom: 25px;
+  }
+
+  .radio-group, .checkbox-group {
+    margin-bottom: 10px;
+  }
+
+  button {
+    background-color: #2b6cb0;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  button:hover {
+    background-color: #1e4f8f;
+  }
+</style>
+</head>
+<body>
+
+<h2>University Admission Form</h2>
+
+<form action="#" method="POST" enctype="multipart/form-data">
+
+  <!-- Personal Information -->
+  <div class="section">
+    <h3>Personal Information</h3>
+
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required><br>
+
+    <label for="nationality">Nationality:</label>
+    <input type="text" id="nationality" name="nationality"><br>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address"></textarea><br>
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" required> Male
+    <input type="radio" id="female" name="gender" value="female"> Female<br>
+  </div>
+
+  <!-- Academic Information -->
+  <div class="section">
+    <h3>Academic Information</h3>
+
+    <label for="highestQualification">Highest Qualification:</label>
+    <select id="highestQualification" name="highestQualification" required>
+      <option value="">-- Select --</option>
+      <option>Secondary School Certificate (SSC)</option>
+      <option>Higher Secondary Certificate (HSC)</option>
+      <option>Diploma</option>
+      <option>Bachelor Degree</option>
+      <option>Others</option>
+    </select><br>
+
+    <label for="passingYear">Year of Passing:</label>
+    <input type="number" id="passingYear" name="passingYear"><br>
+
+    <label for="institution">Institution / Board:</label>
+    <input type="text" id="institution" name="institution"><br>
+
+    <label for="gpa">GPA / Grade:</label>
+    <input type="text" id="gpa" name="gpa"><br>
+  </div>
+
+  <!-- Preferred Program -->
+  <div class="section">
+    <h3>Preferred Department & Program</h3>
+
+    <label for="program">Program of Interest:</label>
+    <select id="program" name="program" required>
+      <option value="">-- Select Program --</option>
+      <option>B.Sc. in Computer Science</option>
+      <option>BBA</option>
+      <option>B.Eng. (Electrical/Civil)</option>
+      <option>B.Arch</option>
+    </select><br>
+
+    <label for="intake">Preferred Intake:</label>
+    <select id="intake" name="intake">
+      <option value="">-- Select Intake --</option>
+      <option>January</option>
+      <option>May</option>
+      <option>September</option>
+    </select><br>
+  </div>
+
+  <!-- Documents -->
+  <div class="section">
+    <h3>Documents</h3>
+
+    <label for="photo">Recent Photo:</label>
+    <input type="file" id="photo" name="photo" accept="image/*" required><br>
+
+    <label for="transcript">Transcript / Marksheet:</label>
+    <input type="file" id="transcript" name="transcript" accept=".pdf,.doc,.docx" required><br>
+  </div>
+
+  <!-- Declaration -->
+  <div class="section">
+    <h3>Declaration</h3>
+
+    <label>
+      <input type="checkbox" id="agree" name="agree" required>
+      I hereby declare that the information provided is true and correct.
+    </label><br><br>
+
+    <button type="reset">Reset</button>
+    <button type="submit">Submit Application</button>
+  </div>
+
+</form>
+</body>
+</html>

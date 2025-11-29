@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        input {
+            padding: 8px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #b3d9e8;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-left: 10px;
+        }
+
+        .edit-btn {
+            color: blue;
+            background: #d4ecff;
+            margin-left: 10px;
+        }
+
+        .delete-btn {
+            color: red;
+            background: #ffd4d4;
+            margin-left: 10px;
+        }
+
+        .highlight {
+            background: yellow;
+        }
+
+        .student-box {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Student Management System</h1>
+
+<label>Student Name:</label>
+<input type="text" id="studentName" placeholder="Enter student name">
+<button onclick="addStudent()">Add Student</button>
+
+<h2>Student List</h2>
+
+<div id="studentList"></div>
+
+<br>
+<button onclick="highlightStudents()">Highlight Students</button>
+
+<script>
+function addStudent() {
+    let name = document.getElementById("studentName").value.trim();
+
+    if (!/^[A-Za-z]+$/.test(name)) {
+        alert("Student name must contain letters only (no spaces or numbers).");
+        return;
+    }
+
+    let list = document.getElementById("studentList");
+
+    let box = document.createElement("div");
+    box.className = "student-box";
+    box.innerHTML = `
+        <span class="student-name">${name}</span>
+        <button class="edit-btn" onclick="editStudent(this)">Edit</button>
+        <button class="delete-btn" onclick="deleteStudent(this)">Delete</button>
+    `;
+
+    list.appendChild(box);
+
+    document.getElementById("studentName").value = "";
+}
+
+function editStudent(btn) {
+    let nameSpan = btn.parentNode.querySelector(".student-name");
+    let newName = prompt("Enter new name:", nameSpan.textContent);
+
+    if (newName && /^[A-Za-z]+$/.test(newName)) {
+        nameSpan.textContent = newName;
+    } else {
+        alert("Invalid name. Use letters only.");
+    }
+}
+
+function deleteStudent(btn) {
+    btn.parentNode.remove();
+}
+
+function highlightStudents() {
+    let students = document.querySelectorAll(".student-box");
+
+    students.forEach(box => {
+        box.classList.toggle("highlight");
+    });
+}
+</script>
+
+</body>
+</html>
